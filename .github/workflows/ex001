@@ -1,0 +1,14 @@
+create table clientes  
+( 
+    cod_cliente number(4) primary key, 
+    nome_clientes varchar(20) not null 
+)
+create table pedidos 
+( 
+    id number(4) primary key, 
+    id_cliente number(4) not null references clientes(cod_cliente), 
+    data_pedidos date not null, 
+    observacoes varchar(100), 
+    valor_total number(5,2) not null
+);
+desc pedidos;
