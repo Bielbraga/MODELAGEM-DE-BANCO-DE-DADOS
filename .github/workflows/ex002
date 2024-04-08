@@ -1,0 +1,12 @@
+create table alunos(
+    matricula number(8) not null primary key,
+    nome_aluno varchar(2) not null
+);
+ create table notas
+(
+     id number(4) primary key,
+     id_aluno number(5) not null references alunos(matricula),
+     nota number(2,2) not null,
+     data date not null
+);
+desc notas;
